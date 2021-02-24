@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="external.css"> <!-- External css used here -->
+    <style type="text/css">     /* internal css */
+        body{
+            background-color: #eb6841; /*  #FF3200 #eb6841 #edc951 */
+        }
+        .formfield * {
+            vertical-align: top;
+        }
+        .center {
+            background-color: #edc951;
+            margin-top: 5rem;
+            margin-left: auto;
+            margin-right: auto;
+            width: 55%;
+        }
+        td{
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        hr {
+            background-color: white;
+            height:0.1px;
+            color: white;
+            border-width:0;;
+        }
+        .first_col{
+            size: 24px;      
+            line-height: 39px;      
+            text-align: top;
+        }
+        .first_col,.looks{
+            font-family: "Lucida Grande", sans-serif;
+            color:#6a4a3c;
+            font-weight: 700;
+        }
+        .looks{
+            font-size:14px;
+        }
+        .first{
+            margin-left: 10.5rem;
+            margin-right: 7.7rem;            
+        }
+        .under{
+            color: #846456;
+            font-family: "Lucida Grande", sans-serif;
+            font-size: 11px;
+        }
+        .area{
+            margin-left: 9.6rem;
+            margin-right: 2.1rem;
+        }
+        .street{
+            margin-bottom: 1em;
+        }
+        .mail{
+            margin-bottom: 0.7rem;
+        }
+        .state{
+            margin-left: 9.7rem;
+        }
+        #country,#flight, #travel, #insurance,#payment{
+            width: 150px;
+        }
+        .county{
+            margin-left: 5.7rem;
+        }
+        #occassion{
+            margin-top: 0.5rem;
+        }
+        #only, #flight,.age{
+            margin-top: 0.5rem;
+        }
+        #cabin{
+            margin-top: 1rem;
+        }
+        .cab1, .cab2, .age{
+            color: #6a4a3c;
+            font-family: "Lucida Grande", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        
+    </style>    
+</head>
+<body>
+    <main>
+        <table class="center">
+            <tr>
+                <td>
+                    <img src="logo.jpg" alt="logo">                    
+                    <h3 class="first_col">Travel Booking Request Form</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <hr>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="fname">Passenger Contact Info*</label>
+                            <input type="text" id="fname" name="fname">&ensp; <input type="text" id="lname" name="lname"><br>
+                            <label class="first under" for="fname">First name <span style="color: red; font-size: 13px;"><b>*</b></span></label>
+                            <label class="under" for="lname">Last name<span style="color: red; font-size: 13px;"><b>*</b></span></label>
+                          </form>                                   <!-- inline css used below -->
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="fname">Best Contact Number*</label>
+                            <input type="text" size="5" id="acode" name="acode">&ensp;-&ensp;<input type="text" size="30" id="phone" name="phone"><br>
+                            <label class="area under" for="acode">Area Code<span style="color: red; font-size: 13px;"><b>*</b></span></label>
+                            <label class="under" for="phone">Phone number<span style="color: red; font-size: 13px;"><b>*</b></span></label>
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td class="container">    
+                    <label class="looks street" for="fname">Mailing Address*</label>                                                         
+                    <p>                                                
+                        <form action="">
+                            <div class="mail">
+                                <input type="text" size="46" id="street_address" name="address" placeholder=""><br>
+                                <label class="mailchild under" for="fname">Street Address<span style="color: red; font-size: 13px;"><b>*</b></span></label>
+                            </div>                                                      
+                            <div class="mail">
+                                <input type="text" size="46" id="street_address2" name="address" placeholder=""><br>
+                                <label class="mailchild under" for="fname">Street Address Line 2</label>
+                            </div>      
+                            <div class="mail">
+                                <input type="text" size="20" id="city" name="city">&nbsp;<input type="text" size="20" id="province" name="province"><br>
+                                <label class="under" for="city">City<span style="color: red; font-size: 13px;"><b>*</b></span></label>
+                                <label class="under state" for="province">State / Province<span style="color: red; font-size: 13px;"><b>*</b></span></label>
+                            </div>
+                            <div class="mail">
+                                <input type="text" size="20" id="zip" name="zip">
+                                <select id="country" name="country">
+                                    <option value="select">Please Select</option>
+                                    <option value="australia">Australia</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="usa">USA</option>
+                                </select><br>
+                                <label class="under" for="zip">Postal / Zip Code<span style="color: red; font-size: 13px;"><b>*</b></span></label>
+                                <label class="under county" for="country">Country<span style="color: red; font-size: 13px;"><b>*</b></span></label>
+                            </div>                                             
+                        </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="email">E-mail*</label>
+                            <input type="text" size="35" id="email_id" name="email_id" placeholder="ex: myname@example.com">
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="v_email">Verify Email*</label>
+                            <input type="text" size="25" id="v_email" name="v_email" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="adults">Total Number of Adults</label>
+                            <input type="number" size="25" id="adults" name="adults" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="">
+                        <p class="formfield">
+                            <label class="looks" for="textarea">Adult Names</label>
+                            <textarea id="textarea" rows="6" cols="50"></textarea>
+                        </p>
+                    </form>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="children">Total Number of Children</label>
+                            <input type="number" size="25" id="adults" name="children" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="">
+                        <p class="formfield">
+                            <label class="looks" for="textarea">Children Names and Ages</label>
+                            <textarea id="textarea" rows="6" cols="50"></textarea>
+                        </p>
+                    </form>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="travel">Type of Travel</label>
+                            <input type="text" size="25" id="travel" name="travel" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="occassion">Special Occassion (Birthday, Honeymoon, Destination Wedding, Music Festival, ...</label>
+                            <input type="text" size="22" id="occassion" name="occassion">
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="dest">Destination</label>
+                            <input type="text" size="25" id="dest" name="dest" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="hotel">Preferred . Hotel</label>
+                            <input type="text" size="25" id="hotel" name="hotel" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="inclu">All inclusive</label>
+                            <input type="text" size="25" id="inclu" name="inclu" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="only">Adult Only or Kid Friendly</label><br>
+                            <select id="country" name="country">
+                                <option value=""></option> 
+                                <option value="Adult">Adult Only</option>
+                                <option value="australia">Kid Friendly</option>
+                                <option value="canada">Doesn't Matter</option>
+                            </select>
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="only">Flight Only</label><br>
+                            <select id="flight" name="flight">
+                                <option value=""></option> 
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="only">Include Flight</label><br>
+                            <select id="flight" name="flight">
+                                <option value=""></option> 
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="only">Round Trip Flight</label><br>
+                            <select id="flight" name="flight">
+                                <option value=""></option> 
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="">
+                        <p class="formfield">
+                            <label class="looks" for="textarea">Flight Departure and Arrival City</label>
+                            <textarea id="textarea" rows="6" cols="50"></textarea>
+                        </p>
+                    </form>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="room">Number of Rooms</label>
+                            <input type="text" size="25" id="room" name="room" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="group">Size of Group</label>
+                            <input type="text" size="25" id="group" name="group" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="accomodation">King / Double /Suite /Penthouse</label>
+                            <input type="text" size="25" id="accomodation" name="accomodation" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="rate">Special Rates AAA, Military, Government, etc</label>
+                            <input type="text" size="25" id="rate" name="rate" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="only">Transportation To And From Hotel</label><br>
+                            <select id="flight" name="flight">
+                                <option value=""></option> 
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label id="cabin" class="looks">Cabin Type (If Applicable)</label><br>
+                            <input type="checkbox" id="cabin" name="cabin" value="inside">
+                            <label class="cab1" for="cabin">Inside Cabin</label><br>
+                            <input type="checkbox" id="cabin2" name="cabin2" value="outside">
+                            <label class="cab2" for="cabin2">Outside Cabin</label><br>
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="cruise">Porting From (Cruises)</label>
+                            <input type="text" size="25" id="cruise" name="cruise" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="travel">Travel Dates</label><br>
+                            <select id="travel" name="travel">
+                                <option value=""></option> 
+                                <option value="From">From</option>
+                                <option value="To">To</option>
+                            </select>
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="estimate">Estimated Trip Amount (US Dollars)</label>
+                            <input type="text" size="25" id="estimate" name="estimate" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="preference">Preferred Cruise Line</label>
+                            <input type="text" size="25" id="preference" name="preference" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="cruise_before">Have You Been On A Cruise Before?</label>
+                            <input type="text" size="25" id="cruise_before" name="cruise_before" >
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="cruiseline">If Yes, Which Cruise Line?</label>
+                            <input type="text" size="25" id="cruiseline" name="cruiseline" >
+                        </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks">Is Anyone Traveling Over The Age Of 55?</label><br>
+                            <input type="radio" class="age" id="Yes" name="age" value="yes">
+                            <label class="" for="male">Yes</label><br>
+                            <input type="radio" id="No" name="age" value="no">
+                            <label for="female">No</label><br>
+                        </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks">Does Anyone Traveling Have A Military Background?</label><br>
+                            <input type="radio" class="age" id="Yes" name="age" value="yes">
+                            <label class="" for="male">Yes</label><br>
+                            <input type="radio" id="No" name="age" value="no">
+                            <label for="female">No</label><br>
+                        </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="">
+                        <p class="formfield">
+                            <label class="looks" for="textarea">Special Instructions</label>
+                            <textarea id="textarea" rows="6" cols="50"></textarea>
+                        </p>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="">
+                        <p class="formfield">
+                            <label class="looks" for="textarea">Activities: Spa, Golf, Excursion, Activities, Event Ticket, Shows, etc</label>
+                            <textarea id="textarea" rows="6" cols="50"></textarea>
+                        </p>
+                    </form>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="insurance">Include Travel Insurance</label><br>
+                            <select id="insurance" name="insurance">
+                                <option value=""></option> 
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action="">
+                            <label class="looks" for="payment">Payment Selection*</label><br>
+                            <select id="payment" name="payment">
+                                <option value=""></option> 
+                                <option value="Payment Plan">Yes</option>
+                                <option value="Pay in Full">No</option>
+                            </select>
+                          </form>
+                    </p>
+                </td>
+            </tr>
+            <tr>                
+                <td>                     
+                    <p class="formfield">
+                        <form action=""> 
+                            <label class="looks" for="fee">Research Fee</label>
+                            <input type="text" size="7" id="fee" name="preference" value="15">
+                            <label class="looks" for="fee">USD</label><br><br>
+                            <button onclick="return SubmitByID()">Submit</button>
+                          </form>
+                    </p>
+                </td>
+            </tr>               
+        </table>        
+    </main>
+    <footer>
+        <h3>Policy</h3>
+        <p class="Policy">
+            We know that you care how information about you is used and shared, and we appreciate your trust that we will do so carefully and sensibly. This Privacy Notice describes how Cramazon Seller Services Private Limited and its affiliates including Cramazon.com, Inc. (collectively "Amazon") collect and process your personal information through Amazon websites, devices, products, services, online marketplace and applications that reference this Privacy Notice (together "Cramazon Services").
+        </p>
+        <h3>Conditions of Use</h3>
+        <p class="Conditions">
+            If you choose to use Cramazon Services, your use and any dispute over privacy is subject to this Notice and our Conditions of Use, including limitations on damages, resolution of disputes, and application of the prevailing law in India. If you have any concern about privacy at Cramazon, please contact us with a thorough description, and we will try to resolve it. Our business changes constantly, and our Privacy Notice will change also. You should check our websites frequently to see recent changes.
+        </p>
+        <h3>Instructions</h3>
+        <p class="Instruction">
+            Short instructions—instructions that are shown on the same webpage where the worker completes their task. These instructions should provide an easy reference to show the worker the correct way to label an object.
+            Full instructions—instructions that are shown on a dialog box that overlays the page where the worker completes their task. We recommend that you provide detailed instructions for completing the task with multiple examples showing edge cases and other difficult situations for labeling objects. 
+        </p>
+    </footer>        
+      <script src="practice.js"></script>
+</body>
+</html>
